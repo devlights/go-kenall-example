@@ -1,0 +1,25 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  clean:
+    cmds:
+      - rm -f utf_all.csv
+      - go clean
+  download:
+    preconditions:
+      - (! test -f utf_all.csv)
+    cmds:
+      - wget https://www.post.japanpost.jp/zipcode/utf_all.csv
+      - file -i utf_all.csv
+      - wc -l utf_all.csv
+      - ls -lh utf_all.csv | awk '{print $5}'
+    ignore_error: true
+  run:
+    cmds:
+      - go build
+      - ./kenall "^東京.*銀座"
+      - cmd: echo ======================================
+        silent: true
+      - ./kenall "^[^(東京)].*銀座"
