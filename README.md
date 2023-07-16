@@ -31,7 +31,7 @@ $ go install github.com/go-task/task/v3/cmd/task@latest
 
 ## How to
 
-### Run
+### Run (on Gitpod)
 
 ```sh
 $ task download
