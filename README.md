@@ -1,6 +1,33 @@
 # go-kenall-example
 
-郵便番号データ、通称 KEN_ALL でファイル操作を行っているサンプルです。(新しく追加された utf_all.csv を使っています）
+郵便番号データ、通称 KEN_ALL でファイル操作を行っているサンプルです。
+
+(新しく追加された utf_all.csv を使っています）
+
+![Go Version](https://img.shields.io/badge/go-1.20-blue.svg)
+
+## Environments
+
+```sh
+$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 22.04.2 LTS
+Release:        22.04
+Codename:       jammy
+
+
+$ go version
+go version go1.20.5 linux/amd64
+```
+
+## Requirements
+
+### [Task](https://taskfile.dev/)
+
+```sh
+$ go install github.com/go-task/task/v3/cmd/task@latest
+```
 
 ## How to
 
