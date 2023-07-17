@@ -23,3 +23,10 @@ tasks:
       - cmd: echo ======================================
         silent: true
       - ./kenall "^[^(東京)].*銀座"
+  run-with-time:
+    cmds:
+      - go build
+      - time ./kenall "^東京.*銀座"
+      - cmd: echo ======================================
+        silent: true
+      - time ./kenall "^[^(東京)].*銀座"
